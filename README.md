@@ -7,7 +7,12 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
+<<<<<<< HEAD
 ## About Laravel
+=======
+Install Composer (https://getcomposer.org/download/) and Laravel (5.4) as well as MySQL (XAMPP used).
+configure config/database.php to server specifications and make sure you have a database to write to.
+>>>>>>> 6a9477d4fe1e982ba47391964dd32377e9353bde
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
 
@@ -21,6 +26,7 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 
 Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb combination of simplicity, elegance, and innovation give you tools you need to build any application with which you are tasked.
 
+<<<<<<< HEAD
 ## Learning Laravel
 
 Laravel has the most extensive and thorough documentation and video tutorial library of any modern web application framework. The [Laravel documentation](https://laravel.com/docs) is thorough, complete, and makes it a breeze to get started learning the framework.
@@ -38,3 +44,12 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+=======
+TODO: differentiate behavior between private and public petitions.
+
+TODO: Make User console to create and manage petitions.
+
+TODO: Hide the flashing right before angular call finishes.
+
+TODO: etc.
+>>>>>>> 6a9477d4fe1e982ba47391964dd32377e9353bde

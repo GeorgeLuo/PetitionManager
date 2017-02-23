@@ -8,10 +8,20 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Petition Admin Console</title>
+
+      <!-- CSS -->
+      <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+      <!-- load bootstrap via cdn -->
+      <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+      <!-- load fontawesome -->
+      <style>
+         form        { padding-bottom:20px; }
+         .comment    { padding-bottom:20px; }
+      </style>
 
     <!-- Styles -->
-    <link href="/css/app.css" rel="stylesheet">
+    <!-- <link href="/css/app.css" rel="stylesheet"> -->
 
     <!-- Scripts -->
     <script>
@@ -35,8 +45,8 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                    <a class="navbar-brand" href="{{ url('/petitions') }}">
+                        Petition Admin Console
                     </a>
                 </div>
 

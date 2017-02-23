@@ -34,7 +34,9 @@
          <!-- PAGE TITLE =============================================== -->
          <div class="page-header">
       <div class="form-group text-right">   
-         <button type="submit" class="btn btn-primary btn-sm">Open Dashboard</button>
+          <input type="button" class="btn btn-primary btn-sm" value="Open Dashboard" onclick="location.href = '/login';">
+
+         <!-- <button class="btn btn-primary btn-sm" href="/login">Open Dashboard</button> -->
       </div>         </div>
          <div class="petition" ng-repeat="petition in petitions"> 
             <h3>{{ petition.title }} <a href="{{ petition.petition_key }}"><small>{{ petition.petition_key }}</small></a></h3>

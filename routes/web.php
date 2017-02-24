@@ -38,6 +38,11 @@ Route::get('/console', function () {
     return View::make('user-console'); 
 })->middleware('auth');
 
+Route::get('auth/logout', function () {
+	Auth::logout();
+	return Redirect::to('/console');
+});
+
 Route::any( '{catchall}', function ( $page ) {
     dd( $page . ' requested' );
 } )->where('catchall', '(.*)');

@@ -35,6 +35,7 @@
          <div class="page-header">
             <div class="form-group text-right">   
                 <input type="button" class="btn btn-primary btn-sm" value="Home" onclick="location.href = '/petitions';">
+                <input type="button" class="btn btn-primary btn-sm" value="Logout" onclick="location.href = '/auth/logout';">
 
                <!-- <button class="btn btn-primary btn-sm" href="/login">Open Dashboard</button> -->
             </div>         

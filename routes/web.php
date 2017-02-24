@@ -33,6 +33,11 @@ Route::get('petitions/{petition_key}', function ($petition_key) {
     return View::make('index')->with('petition_info', $result); 
 });
 
+Route::get('/console', function () {
+
+    return View::make('user-console'); 
+})->middleware('auth');
+
 Route::any( '{catchall}', function ( $page ) {
     dd( $page . ' requested' );
 } )->where('catchall', '(.*)');

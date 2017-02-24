@@ -34,7 +34,7 @@
          <!-- PAGE TITLE =============================================== -->
          <div class="page-header">
             <div class="form-group text-right">   
-                <input type="button" class="btn btn-primary btn-sm" value="Open Dashboard" onclick="location.href = '/console';">
+                <input type="button" class="btn btn-primary btn-sm" value="Home" onclick="location.href = '/petitions';">
 
                <!-- <button class="btn btn-primary btn-sm" href="/login">Open Dashboard</button> -->
             </div>         

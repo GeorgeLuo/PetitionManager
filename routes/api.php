@@ -55,9 +55,48 @@ Route::post('signatures/{petition_id}', function ($petition_id, Request $request
     mail($to, $subject, $message, $headers);
 });
 
-Route::resource('photo', 'PhotoController', ['only' => [
-    'index', 'show'
-]]);
+// Route::get('console/{petition_id}', function ($petition_id, Request $request) {
+//     $input = $request->all();
+//     // generate new petition-id
+
+//     $title = str_replace(" ","-",$request->title);
+//     $signatures = DB::table('signatures')->where('petition_id', $petition_id)->select('firstname', 'lastname', 'email', 'message')->orderBy('created_at', 'desc')->get();
+
+
+//     Petition::create(array(
+//         'petition_id' => $petition_id,
+//         'email' => $request->email,
+//         'firstname' => $request->firstname,
+//         'lastname' => $request->lastname,
+//         'phone' => $request->phone,
+//         'message' => $request->message,
+//     ));
+// });
+
+// update existing petition
+
+// create new petition
+
+Route::post('console/{petition_id}', function ($petition_id, Request $request) {
+    $input = $request->all();
+    // generate new petition-id
+
+    $title = str_replace(" ","-",$request->title);
+    $petitions = DB::table('petitions')->where('petition_id', $petition_id)->select('firstname', 'lastname', 'email', 'message')->orderBy('created_at', 'desc')->get();
+
+    if(empty(array_filter((array) $petitions))) {
+        return redirect()->route('/petitions');
+    }
+
+    Petition::create(array(
+        'petition_id' => $petition_id,
+        'email' => $request->email,
+        'firstname' => $request->firstname,
+        'lastname' => $request->lastname,
+        'phone' => $request->phone,
+        'message' => $request->message,
+    ));
+});
 
 
 

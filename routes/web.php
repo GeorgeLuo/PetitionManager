@@ -40,10 +40,11 @@ Route::get('/console', function () {
 
 Route::get('auth/logout', function () {
 	Auth::logout();
-	return Redirect::to('/console');
+	return Redirect::to('/petitions');
 });
 
 Route::any( '{catchall}', function ( $page ) {
+	return Redirect::to('/petitions');
     dd( $page . ' requested' );
 } )->where('catchall', '(.*)');
 
